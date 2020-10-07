@@ -18,17 +18,18 @@ page = html.Div(children=[
         dbc.Col([
             html.Div([
                 html.P('Account Balance', className='label'),
-                html.H4('$3203.71')
+                html.P('$3203.71')
             ], className='dashboard-element-div'),
             html.Div([
-                html.P('Account Balance', className='label'),
-                html.H4('$3203.71')
-            ], className='dashboard-element-div')
+                html.P('Top Position', className='label'),
+                html.P('$3203.71 (0.37%)'),
+                html.Div(id='arrow-down')
+            ], id='position-div', className='dashboard-element-div'),
         ], id='dashboard-container', width='auto'),
 
         # BODY
         dbc.Col([
-            html.P('Main Body')
+            html.P('Main Body'),
         ], id='body-container')
     ])
 ])

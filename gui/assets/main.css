@@ -13,17 +13,40 @@ body {
 }
 
 .dashboard-element-div {
-    margin-left: 15px;
+    margin-top: 10px;
+    text-align: center;
+    align-content: center;
 }
 
-.label {
+.dashboard-element-div p {
     margin: 0;
 }
 
+.label {
+    font-size: 12px;
+}
+
+#position-div:hover {
+    cursor: pointer;
+}
+
+#position-div:hover #arrow-down {
+    visibility: visible;
+}
+
 #dashboard-container {
-    width: 200px;
+    padding: 0;
+    width: 250px;
     height: 100vh;
     background-color: #1a212e;
     align-content: center;
-    /* border-right: 1px solid #2b364b; */
+}
+
+#arrow-down {
+    width: 0;
+    margin: auto;
+    visibility: hidden;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
 }
