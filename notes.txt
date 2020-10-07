@@ -1,0 +1,6 @@
+# DASHBOARD
+- account balance
+- account return (daily)
+- positions performance dropdown/modal
+- *watchlist
+- *movers
