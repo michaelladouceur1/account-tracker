@@ -2,16 +2,14 @@
 import dash
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
-import pandas as pd
-import json
 
 # Local Imports
 from gui.app import app
 
 @app.callback(
-    Output('position-collapse','is_open'),
-    [Input('position-open','n_clicks')],
-    [State('position-collapse','is_open')],
+    Output('positions-modal','is_open'),
+    [Input('positions-card','n_clicks')],
+    [State('positions-modal','is_open')],
 )
 def open_dashboard_positions(n, is_open):
     if n:

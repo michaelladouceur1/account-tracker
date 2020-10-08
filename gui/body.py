@@ -9,44 +9,68 @@ from dash.dependencies import Input, Output
 # Local Imports
 from gui.app import app
 
-# DASHBOARD
-
 page = html.Div(children=[
     dbc.Row([
 
         # DASHBOARD
         dbc.Col([
+
+            # GENERAL INFO
             html.Div([
-                html.P('Account Balance', className='label'),
-                html.P('$3203.71')
+                dbc.Card([
+                    dbc.CardHeader(html.P('Account Balance', className='label')),
+                    dbc.CardBody([
+                        html.P('$3203.71')
+                    ])
+                ])
             ], className='dashboard-element-div'),
+
+            # POSITIONS
             html.Div([
-                html.P('Top Position', className='label'),
-                html.P('$3203.71 (0.37%)'),
-                html.Div(id='arrow-down')
+                dbc.Card([
+                    dbc.CardHeader(html.P('Top Positions', className='label')),
+                    dbc.CardBody([
+                        html.P('QQQ: $276.71 (0.37%)'),
+                        html.P('TSLA: $420.69 (0.31%)'),
+                        html.P('GLD: $315.81 (0.27%)'),
+                        html.P('FNV: $154.17 (0.26%)'),
+                        html.P('SAND: $42.93 (0.15%)')
+                    ])
+                ], id='positions-card')
             ], id='position-div', className='dashboard-element-div'),
+
+            # NAVIGATION
+            html.Div([
+                html.Button([
+                    html.I(className='fas fa-chart-bar'),
+                    html.Span('Positions')
+                ], id='positions-button', className='navigation-button'),
+                html.Button([
+                    html.I(className='fas fa-eye'),
+                    html.Span('Watchlist')
+                ], id='watchlist-button', className='navigation-button'),
+                html.Button([
+                    html.I(className='fas fa-wave-square'),
+                    html.Span('Research')
+                ], id='research-button', className='navigation-button'),
+                html.Button([
+                    html.I(className='fas fa-arrow-circle-down'),
+                    html.Span('Download')
+                ], id='download-button', className='navigation-button'),
+                html.Button([
+                    html.I(className='fas fa-cog'),
+                    html.Span('Settings')
+                ], id='settings-button', className='navigation-button')
+            ], className='dashboard-element-div')
         ], id='dashboard-container', width='auto'),
 
         # BODY
         dbc.Col([
+            dbc.Modal([
+                dbc.ModalHeader('Positions'),
+                dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
+            ], id='positions-modal'),
             html.P('Main Body'),
         ], id='body-container')
     ])
 ])
-
-# dashboard = html.Div(children=[
-#     dbc.Row([
-#         dbc.Col([
-#             html.Div([
-#                 html.P('Account Balance'),
-#                 html.H4('$3203.71')
-#             ], className='column')
-#         ]),
-#         dbc.Col([
-#             html.Div([
-#                 html.P('Account Balance'),
-#                 html.H4('$3203.71')
-#             ], className='column')
-#         ])
-#     ])
-# ], id='dashboard-container')

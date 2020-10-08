@@ -7,6 +7,33 @@ body {
     overflow-x: hidden;
 }
 
+span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card {
+    margin-left: 15%;
+    margin-right: 10%;
+    background-color: #1a212e;
+    border: solid 1px gray;
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+
+.card:hover {
+    background-color: #232c3d;
+    /* border: solid 1px white; */
+}
+
+.card-header {
+    padding: 5px 0 5px 0;
+}
+
+.card-body {
+    padding: 10px 0 10px 0;
+}
+
 .column {
     margin: auto;
     text-align: center;
@@ -26,8 +53,33 @@ body {
     font-size: 12px;
 }
 
+.navigation-button {
+    width: 100%;
+    text-align: left;
+    padding-left: 15%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.3s linear;
+}
+
+.navigation-button:hover {
+    background-color: #232c3d;
+}
+
+.navigation-button:focus {
+    outline: 0;
+}
+
+.navigation-button span {
+    margin-left: 25px;
+}
+
 #position-div:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 #position-div:hover #arrow-down {
@@ -36,17 +88,8 @@ body {
 
 #dashboard-container {
     padding: 0;
-    width: 250px;
+    width: 300px;
     height: 100vh;
     background-color: #1a212e;
     align-content: center;
-}
-
-#arrow-down {
-    width: 0;
-    margin: auto;
-    visibility: hidden;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid white;
 }

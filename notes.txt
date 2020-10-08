@@ -1,6 +1,29 @@
 # DASHBOARD
-- account balance
-- account return (daily)
-- positions performance dropdown/modal
-- *watchlist
-- *movers
+    # GENERAL INFO
+    - account balance
+    - account return (daily)
+    - positions performance dropdown/modal
+    - *watchlist
+    - *movers
+
+    # NAVIGATION
+    - positions
+    - watchlist
+    - research
+    - download
+    - settings
+
+# BODY
+    - performance graph
+    - prediction graph
+    
+    # POSITIONS 
+    # WATCHLIST 
+    # RESEARCH 
+        - symbol search
+        - individual sharpe ratio 
+        - sharpe ratio effects
+        - monte carlo simulation
+        - stock info 
+    # DOWNLOAD 
+    # SETTINGS 
