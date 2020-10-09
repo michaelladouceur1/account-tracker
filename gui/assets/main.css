@@ -53,6 +53,15 @@ span {
     font-size: 12px;
 }
 
+.modal-content {
+    background-color: #1a212e;
+}
+
+.modal-header {
+    margin: auto;
+    text-align: center;
+}
+
 .navigation-button {
     width: 100%;
     text-align: left;

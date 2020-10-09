@@ -43,8 +43,8 @@ page = html.Div(children=[
             html.Div([
                 html.Button([
                     html.I(className='fas fa-chart-bar'),
-                    html.Span('Positions')
-                ], id='positions-button', className='navigation-button'),
+                    html.Span('Metrics')
+                ], id='metrics-button', className='navigation-button'),
                 html.Button([
                     html.I(className='fas fa-eye'),
                     html.Span('Watchlist')
@@ -66,10 +66,19 @@ page = html.Div(children=[
 
         # BODY
         dbc.Col([
+
+            # METRICS MODAL
             dbc.Modal([
-                dbc.ModalHeader('Positions'),
+                dbc.ModalHeader('Metrics'),
                 dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
-            ], id='positions-modal'),
+            ], id='metrics-modal', centered=True, size='lg'),
+
+            # WATCHLIST MODAL
+            dbc.Modal([
+                dbc.ModalHeader('Watchlist'),
+                dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
+            ], id='watchlist-modal', centered=True, size='lg'),
+
             html.P('Main Body'),
         ], id='body-container')
     ])
