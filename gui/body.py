@@ -69,13 +69,13 @@ page = html.Div(children=[
 
             # METRICS MODAL
             dbc.Modal([
-                dbc.ModalHeader('Metrics'),
+                dbc.ModalHeader('Metrics', className='modal-header'),
                 dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
             ], id='metrics-modal', centered=True, size='lg'),
 
             # WATCHLIST MODAL
             dbc.Modal([
-                dbc.ModalHeader('Watchlist'),
+                dbc.ModalHeader('Watchlist', className='modal-header'),
                 dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
             ], id='watchlist-modal', centered=True, size='lg'),
 

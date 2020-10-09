@@ -57,6 +57,11 @@ span {
     background-color: #1a212e;
 }
 
+.modal-dropdown {
+    width: 150px;
+    background-color: #1a212e;
+}
+
 .modal-header {
     margin: auto;
     text-align: center;
