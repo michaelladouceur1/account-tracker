@@ -79,6 +79,24 @@ page = html.Div(children=[
                 dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
             ], id='watchlist-modal', centered=True, size='lg'),
 
+            # RESEARCH MODAL
+            dbc.Modal([
+                dbc.ModalHeader('Research', className='modal-header'),
+                dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
+            ], id='research-modal', centered=True, size='lg'),
+
+            # DOWNLOAD MODAL
+            dbc.Modal([
+                dbc.ModalHeader('Download', className='modal-header'),
+                dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
+            ], id='download-modal', centered=True, size='lg'),
+
+            # SETTINGS MODAL
+            dbc.Modal([
+                dbc.ModalHeader('Settings', className='modal-header'),
+                dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
+            ], id='settings-modal', centered=True, size='lg'),
+
             html.P('Main Body'),
         ], id='body-container')
     ])
