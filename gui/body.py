@@ -8,6 +8,9 @@ from dash.dependencies import Input, Output
 
 # Local Imports
 from gui.app import app
+from utils.router import Router
+
+router = Router()
 
 page = html.Div(children=[
     dbc.Row([
@@ -88,7 +91,13 @@ page = html.Div(children=[
             # DOWNLOAD MODAL
             dbc.Modal([
                 dbc.ModalHeader('Download', className='modal-header'),
-                dbc.ModalBody('POSITIONSPOSITIONSPOSITIONS')
+                dbc.ModalBody([
+                    dcc.Dropdown(
+                        id='download-symbol-dropdown',
+                        options=router.dropdown_symbols(),
+                        multi=True
+                    )
+                ])
             ], id='download-modal', centered=True, size='lg'),
 
             # SETTINGS MODAL

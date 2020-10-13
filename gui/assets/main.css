@@ -92,6 +92,10 @@ span {
     margin-left: 25px;
 }
 
+.Select {
+    color: #1a212e;
+}
+
 #position-div:hover {
     /* cursor: pointer; */
 }
