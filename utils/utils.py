@@ -3,7 +3,7 @@ import pandas as pd
 import platform 
 
 if platform.system()=='Linux':
-    BASE_PATH = '/home/michael/Documents/Coding/account-tracker/utils/assets/'
+    BASE_PATH = '/home/michael/Documents/Coding/Finance/account-tracker/utils/assets/'
 elif platform.system()=='Windows':
     BASE_PATH = 'C:\\Users\\mladouceur\\Python\\account-tracker\\utils\\assets\\'
 

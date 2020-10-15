@@ -5,6 +5,9 @@ from dash.exceptions import PreventUpdate
 
 # Local Imports
 from gui.app import app
+from utils.router import Router
+
+router = Router()
 
 # open_metrics_modal
 @app.callback(
@@ -60,3 +63,12 @@ def open_settings_modal(n, is_open):
     if n:
         return not is_open
     return is_open
+
+
+# DOWNLOAD
+@app.callback(
+    Output('download-symbol-dropdown','options'),
+    [Input('download-sector-dropdown','value')]
+)
+def filter_symbols_by_sector(value):
+    return router.update_download_symbols_dropdown(value)

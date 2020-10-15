@@ -93,9 +93,15 @@ page = html.Div(children=[
                 dbc.ModalHeader('Download', className='modal-header'),
                 dbc.ModalBody([
                     dcc.Dropdown(
+                        id='download-sector-dropdown',
+                        options=router.download_sectors,
+                        placeholder='Filter by Sector...'
+                    ),
+                    dcc.Dropdown(
                         id='download-symbol-dropdown',
-                        options=router.dropdown_symbols(),
-                        multi=True
+                        options=router.download_symbols,
+                        multi=True,
+                        placeholder='Symbol...'
                     )
                 ])
             ], id='download-modal', centered=True, size='lg'),

@@ -26,4 +26,5 @@
         - monte carlo simulation
         - stock info 
     # DOWNLOAD 
+        - possibly move download feature to research
     # SETTINGS 
